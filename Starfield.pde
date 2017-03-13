@@ -1,6 +1,6 @@
 Particle[] normParticles = new NormalParticle[300];
 Particle[] oddParticles = new OddballParticle[2];
-Particle[] jumParticles = new JumboParticle[1];
+Particle[] jumParticles = new JumboParticle[3];
 void setup()
 {
   size(1000,1000);
@@ -95,15 +95,10 @@ class OddballParticle implements Particle
 }
 class JumboParticle extends NormalParticle 
 {
-  double dX;
-  double dY;
-  double dSpeed;
-  double dTheta;
-  int shapeColor;
   public void show()
   {
     fill(shapeColor);
-    ellipse((float)dX,(float)dY,50,50);
+    ellipse((float)dX,(float)dY,100,100);
   }
   public void move(){
     dTheta+= .05;
